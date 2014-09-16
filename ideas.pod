@@ -1,0 +1,80 @@
+=pod
+
+=head1 Stuff to Cover
+
+
+
+=head2 Encapsulation
+
+Private / Friend / Family / Public
+
+
+
+=head2 Don't Double Check
+
+Let's imagine my "Org" class takes a database handle as an attribute. It
+doesn't actually perform any queries on the database, but needs to pass
+it on to any "Dept" objects it instantiates.
+
+Then Org should not perform a type check on the database handle. Org
+should rely on Dept to check its own parameters. Org should just pass
+on whatever value it receives.
+
+Double checking needlessly slows down instantiating Org objects, and
+makes Org less flexible. If a future version (or a subclass) of Dept
+accepts, say, a path to a CSV file as an alternative to a database
+handle, then Org's insistance on only accepting database handles starts
+to look silly.
+
+
+
+=head2 Immutable objects
+
+L<http://blogs.perl.org/users/mascip/2014/06/immutability-with-moose.html>
+
+
+
+=head2 Enumerations
+
+L<http://blogs.perl.org/users/toby_inkster/2014/05/enumerations-in-moose.html>
+
+
+
+=head2 Exceptions
+
+L<http://www.perlmonks.org/index.pl?node_id=1092576>
+
+
+
+=head2 Coderefs
+
+Coderefs have various uses in Perl, but for object-oriented programming,
+there are two patterns which stand out:
+
+=over
+
+=item Coderefs are single-use objects
+
+A coderef C<< $o >> is a classless object with a single (unnamed)
+method:
+
+	$o->method(@args)     # normal object
+	$o->(@args)           # coderef "object"
+
+Note that overloading allows blessed objects to support the unnamed
+method call too.
+
+=over Coderefs are mobile methods
+
+A coderef C<< $method >> is a method that is independent of classes
+and roles, and can thus be called on any object, bypassing method
+resolution:
+
+	$o->method(@args)     # normal method call
+	$o->$method(@args)    # coderef "method"
+
+Doing this with overloading is tricky because Perl stringifies blessed
+methods instead of codulating them.
+
+=back
+

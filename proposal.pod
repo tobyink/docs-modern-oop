@@ -1,0 +1,169 @@
+=pod
+
+=encoding utf-8
+
+=head1 Modern Object Oriented Programming in Perl
+
+=over 1
+
+=item Name:
+
+Toby Inkster
+
+=item Amount Requested:
+
+USD 4,000
+
+=back
+
+=head2 Synopsis
+
+The proposal is to write a book on Modern OO programming techniques using Moose, Moo, and (where applicable) Class::Tiny. This would be written in a similar style to chromatic's I<Modern Perl> book, following the same test-driven approach to development, but covering modern Perl OO programming tools, techniques, and patterns in greater depth.
+
+The primary target audience would be people who are already familiar with programming in Perl, but want to learn about modern object-oriented programming techniques, using Moose and Moo. A secondary target audience would be non-Perl programmers wishing to learn about object-oriented concepts which might not be available in the programming languages they are familiar with (e.g. many OO programming languages do not support the concept of roles) and expose themselves to ideas that might make them better OO programmers overall.
+
+The starting point for the book would be L<C# Programming|http://en.wikibooks.org/wiki/C_Sharp_Programming>, a book available on the Wikibooks website under the Creative Commons Attibution-ShareAlike licence, and the completed project would thus be made available under the same licence.
+
+=head2 Benefits to the Perl Community
+
+The project will aim to make Moose and Moo more understandable to Perl programmers, and also aim to make programmers outside the Perl programming community look at Perl afresh and understand that it may have something to offer them.
+
+Because Moose shares similarities with both Steven Little's proposed metaobject protocol for the Perl 5 core, and with Perl 6's object model, it is hoped that the book will provide a foundation for future books or tutorials on these.
+
+=head2 Deliverables
+
+=over
+
+=item *
+
+A book in at least 16 chapters, each of a similar length and depth to those in the C# book covering the following topics (the list of topics mostly being derived from the C# book):
+
+=over
+
+=item Introduction
+
+An introduction to the book, and references to other books for establishing foundation knowledge upon which this book will build. It would introduce the concept of metaprogramming, but not explain in much depth how to do it.
+
+=item Namespaces
+
+Giving your code its own space to live in.
+
+=item Classes and Methods
+
+The blueprints for objects that describe how they should work.
+
+=item Objects
+
+Cornerstones of any object-oriented programming language, objects are the tools you use to perform work.
+
+=item Encapsulation and accessor levels
+
+Explains protection of object states by encapsulation, or the bundling of an object's data and functionality. (This would be quite substantially rewritten.)
+
+=item Lazily built attributes
+
+(A new chapter demonstrating programming patterns based on lazily-built attributes.)
+
+=item Type constraints and coercions
+
+(C# is a typed language, so Perl would need a completely different treatment. This chapter would be written from scratch.)
+
+=item Roles
+
+(These are not covered by the C# book, so this chapter would be written from scratch, but I may be able to re-use some material from the C# chapter on abstract classes.)
+
+=item Interfaces
+
+Define a template, on which to base sub-classes. (This would require significant rewriting from C#, and would discuss using roles as a way to formalize common interfaces.)
+
+=item Delegation and callbacks
+
+Learn about delegation and callbacks. (This is likely to also involve significant rewriting from the C# chapter on delegation and events. This may cover dependency injection, or dependency injection may be split out into a separate chapter.)
+
+=item Traits
+
+(This would be a new chapter written from scratch about the run-time application of roles to objects and classes.)
+
+=item Inheritance
+
+Re-using existing code to improve or specialize the functionality of an object.
+
+=item Exceptions
+
+Responding to errors that can occur. (This would cover defining exception classes, and throwing and catching exceptions. It would also list some common exceptions thrown from within Moose, and give examples of catching them.)
+
+=item Object Lifetime
+
+Learn about the lifetime of objects, where they are allocated and learn about garbage collection.
+
+=item Design Patterns
+
+Learn commonly used design methodologies to simplify and/or improve your development framework.
+
+=item Metaprogramming Techniques
+
+(A new from-scratch chapter introducing the Moose MOP, and discussing some limited ways of metaprogramming Moo - e.g. wrapping the `has` keyword.)
+
+=back
+
+The book would be made available in pod as a CPAN distribution, and in HTML on the author's website. The source materials for the book would be mirrored on both GitHub.com and Bitbucket.org.
+
+The CPAN distribution would also include executable scripts for key examples from the book.
+
+=item *
+
+A C<< Task::* >> module would be uploaded to CPAN for one-step installation of all the modules covered by the book, and all the modules necessary to execute the example scripts provided.
+
+=item *
+
+If porting the C# examples to Perl brings to light any deficiencies in L<Moose> or L<Moo>, whereby there are key OO ideas from C# that cannot be replicated in these frameworks, these will be discussed with the maintainers of those projects, and the best way to proceed will be decided. This may lead to improvements to L<Moose> or L<Moo>, or the release of new C<< MooseX::* >> or C<< MooX::* >> extension modules.
+
+=back
+
+=head2 Project Details
+
+The proposed title of the book, I<Modern Object Oriented Programming in Perl> is a working title and subject to change. The chapter list may be rearranged slightly in the final version, with some chapters perhaps being merged, and others possibly split if they seem too lengthy.
+
+The code samples will primarily use L<Moose> and L<Moo>. When possible, sample code will be provided for both frameworks, so that they can be compared side-by-side. For some advanced topics, Moo may not offer sufficient facilities, so only a Moose example would be provided. For some very basic topics, L<Class::Tiny> and/or L<Role::Tiny> code samples would also be provided. (The reason for this choice is that Role::Tiny is the basis for Moo's role system, and that there are tentative plans to enable some level of integration between Moo and Class::Tiny.)
+
+The book may mention, but will not cover in any level of detail other Perl object-oriented frameworks such as L<Mouse>, L<Moops>, p5-mop, or L<Class::Accessor>. The book will not cover "do-it-yourself" techniques for writing constructors an accessors, except perhaps for comparison to demonstrate the superior approach of using an OO framework.
+
+Overall the book would encourage correctness, robustness, encapsulation, and non-repetitive design rather than writing especially memory-efficient or fast code, but optimization techniques may be touched on, and the compromises involved may be discussed.
+
+The chapter on type constraints and coercions will cover Moose's and Moo's built-in type constraint systems, but will concentrate on L<Type::Tiny>, a standalone type constraint framework which supports both Moose and Moo. (Disclaimer: I am the developer of Type::Tiny.)
+
+The chapter on exceptions will use L<Try::Tiny> and L<Throwable>.
+
+The chapter on encapsulation will make use of L<Lexical::Accessor>. (Disclaimer: I am also the developer of Lexical::Accessor.)
+
+=head2 Inch-stones
+
+The progress of the project as a whole can be measured by the completion of each chapter. Chapters will not necessarily be completed in the order which they are intended to appear in the book. (The introduction is in fact, likely to be the final chapter written.)
+
+Naturally until the whole book is complete, even a chapter which is "complete" will be subject to revisions -- it is not frozen in stone.
+
+=head2 Project Schedule
+
+My estimate is that each chapter will require two to three days of solid work on average. (Chapters which mostly replicate the original C# book will take less; chapters which require substantial original work, somewhat more.) Additionally, I estimate roughly a week will be needed to stitch the completed chapters together into a cohesive whole.
+
+I plan to dedicate roughly two days a week to the project, over the course of about four months. The planned start for the project is September 2014, with a planned completion date in January or February 2015.
+
+=head2 Completeness Criteria
+
+All the chapters will be available in pod, on CPAN, under a free licence.
+
+(Which is not to say that I'll abandon it thereafter. If errors or omissions are pointed out after the end of the grant, or if new versions of L<Moose> or L<Moo> are released which make the book incorrect, I intend to continue updating the book for the foreseeable future.)
+
+=head2 Bio
+
+I am a freelance developer based in the UK who uses Perl as his preferred programming language, though also develops actively in PHP and Javascript, and dabbles occasionally in other programming languages. I am the author of over 200 CPAN distributions, including many extensions to L<Moose> and L<Moo>. 
+
+I am the primary developer of L<Type::Tiny> and L<Moops>, each of which are frameworks designed to integrate with both Moo and Moose, which has taught me a great deal about the differences and similarities between them. Type::Tiny and Moops were each included in the top 10 best distributions created in 2013, L<according to ratings on MetaCPAN|http://niceperl.blogspot.co.uk/2014/01/best-perl-distributions-created-at-2013.html>. Type::Tiny now has over 100 other CPAN distributions listing it as a direct dependency.
+
+I have contributed, albeit often in minor ways, to many of the modules that I propose to cover in the book. I am listed as a contributor to L<Moo>, L<Role::Tiny>, and L<Class::Tiny>, according to their respective documentation; to L<Throwable>, according to its change log; and to p5-mop-redux, according to GitHub.
+
+I have written an article on the O'Reilly Programming Blog comparing Moose roles with similar approaches for horizontal code reuse in other programming languages. See L<http://programming.oreilly.com/2014/01/horizontal-reuse-an-alternative-to-inheritance.html>.
+
+Raised in both Australia and the UK, I speak English natively.
+
+=cut

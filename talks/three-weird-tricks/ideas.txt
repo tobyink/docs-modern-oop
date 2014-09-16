@@ -1,0 +1,87 @@
+Three weird tricks:
+
+1. Stop making mutable objects
+
+Action at a distance. Example using a DateTime module.
+
+   my $conference = Event->new( start => DateTime->new(...) );
+   my $keynote    = Event->new( start => $conference->start );
+   
+   # Oh crap, we need the keynote to be at the end of the conference
+   $keynote->start += 5*60*60;
+   
+   # Oh double-crap...
+   print $conference->start, "\n";
+
+Make your fingers default to is => "ro" when using Moose.
+
+2. Private/Public methods and subclassability
+
+3. Stop hard-coding stuff.
+
+   sub _fetch_user_list {
+      my $self = shift;
+      my $ua   = LWP::UserAgent->new(
+         agent => sprintf("%s/%s ", __PACKAGE__, $VERSION),
+      );
+      return $ua->get("http://example.com/users.txt");
+   }
+
+Hard-coded:
+
+	- user list URL
+	- the user-agent string
+	- the user-agent class
+
+Bad for testing; bad for extensibility.
+
+Better:
+
+   has ua => (
+      is      => "lazy",
+      builder => sub {
+         my $self = shift;
+         LWP::UserAgent->new(
+            agent => sprintf("%s/%s ", ref($self), $self->VERSION),
+         );
+      },
+   );
+   
+   has user_list_url (
+      is      => "lazy",
+      builder => sub {
+         "http://example.com/users.txt";
+      },
+   );
+   
+   sub _fetch_user_list {
+      my $self = shift;
+      $self->ua->get( $self->user_list_url );
+   }
+
+Better still:
+
+   has ua => (
+      is      => "lazy",
+      builder => sub {
+         my $self = shift;
+         LWP::UserAgent->new(
+            agent => sprintf("%s/%s ", ref($self), $self->VERSION),
+         );
+      },
+      handles => {
+         "_fetch_url" => "get",
+      }
+   );
+   
+   has user_list_url (
+      is      => "lazy",
+      builder => sub {
+         "http://example.com/users.txt";
+      },
+   );
+   
+   sub _fetch_user_list {
+      my $self = shift;
+      $self->_fetch_url( $self->user_list_url );
+   }
