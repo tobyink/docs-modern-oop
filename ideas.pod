@@ -64,7 +64,7 @@ method:
 Note that overloading allows blessed objects to support the unnamed
 method call too.
 
-=over Coderefs are mobile methods
+=item Coderefs are mobile methods
 
 A coderef C<< $method >> is a method that is independent of classes
 and roles, and can thus be called on any object, bypassing method
@@ -75,6 +75,14 @@ resolution:
 
 Doing this with overloading is tricky because Perl stringifies blessed
 methods instead of codulating them.
+
+Callbacks should be implemented this way, with the first parameter as
+an invocant:
+
+    my $app = MyApp->new;
+    $app->register_foo_callback(sub {
+       my $app = shift;  # don't just close over $app because ref cycles
+    });
 
 =back
 
