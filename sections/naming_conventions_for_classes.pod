@@ -1,0 +1,5 @@
+=encoding utf-8
+
+=head1 Naming Conventions for Classes
+
+Z<naming_conventions_for_classes>

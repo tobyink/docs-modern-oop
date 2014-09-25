@@ -1,0 +1,48 @@
+=encoding utf-8
+
+=head0 Namespaces
+
+X<namespaces>
+X<naming>
+
+=begin epigraph
+
+There are only two hard things in Computer Science: cache
+invalidation and naming things.
+-- Phil Karlton
+
+=end epigraph
+
+Namespaces are used to provide a "named space" in which your
+application resides. They're used especially to disambiguate all the
+named information in your program, such as class, role, function, and
+variable names. Without namespaces, you wouldn't be able to make, e.g.,
+a class named C<File>, as the Perl core already has one in its C<IO>
+namespace. The purpose of namespaces is to solve this problem, helping
+you worry less about naming collisions, along with making it so your
+application doesn't occupy names for other applications, if your
+application is intended to be used in conjunction with another. So
+namespaces exist to resolve ambiguities Perl wouldn't otherwise be able
+to do.
+
+Calling a class C<Person> is probably a bad idea. There are widely
+varying views on what exactly constitutes a person. N<Search for
+"cats are people too" on your favourite web search engine if you don't
+believe me.> Calling a class C<Acme_Corp::Person> is probably a better
+idea.
+
+Perl namespaces are arranged in a hierarchy, with each level separated
+by a pair of colons. C<Acme_Corp> is a top-level namespace,
+C<Acme_Corp::BigProject> is a second-level namespace, and so on.
+
+Generally speaking, you should pick a top-level or second-level name
+for your project, and give your classes, roles, and other modules names
+nested within that.
+
+L<cpan_naming_conventions>
+
+L<naming_conventions_for_roles>
+
+L<naming_conventions_for_classes>
+
+L<naming_conventions_for_exporters>

@@ -1,0 +1,24 @@
+=encoding utf-8
+
+=head1 CPAN Naming Conventions
+
+X<naming; CPAN>
+X<naming; pragmata>
+X<naming; internals>
+
+Z<cpan_naming_conventions>
+
+By convention, the C<Local> top-level namespace, and any top-level
+namespace containing an underscore (e.g. C<Foo_Corp> are off-limits to
+the CPAN. So if you hope to upload a module to the CPAN, it is a bad
+idea to put it in one of these namespaces. Conversely if you know that
+a module will never be shared on the CPAN, using one of these top-level
+namespaces will help you avoid naming conflicts with future CPAN
+releases.
+
+Modules named in all lower case are usually I<pragmata> - that is,
+modules with a fairly magical lexical effect - so should be used
+sparingly. Modules in all upper case are often Perl internals, such as
+C<UNIVERSAL>, C<DB>, and C<B>. (People occasionally get into trouble
+calling their database class C<DB>, or using C<A> and C<B> as example
+classes, and wondering why things start behaving unexpectedly!)
