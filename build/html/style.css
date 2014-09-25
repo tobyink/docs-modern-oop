@@ -1,0 +1,174 @@
+body {
+  max-width: 800px;
+  margin: 5px auto;
+  font-size: 1em;
+  font-family: serif;
+  text-shadow: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Verdana', sans-serif;
+  margin: 1.2em 0 0.6em 0;
+  text-shadow: 0;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 1.2em 0;
+}
+
+code {
+  /* borrowed from Dive Into HTML5 */
+  font: normal normal normal medium/1.2 Consolas, 'Andale Mono', Monaco, 'Liberation Mono', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', monospace;
+}
+
+table { font-size: 12px; font-family: sans-serif; border: 1px solid; }
+td    { border: 1px solid; }
+
+th { background: #CCCCCC; text-align: left;}
+
+code {color: #000033;}
+
+.url { color: #000099; }
+.footnote { color: #333333; }
+
+.author
+{
+	background: #ffaaaa;
+	border-style: solid;
+	border-width: thin;
+	padding: 2px;
+	width: 25%;
+}
+
+.editor
+{
+	background: #aaaaff;
+	border-style: solid;
+	border-width: thin;
+	padding: 2px;
+	width: 25%;
+}
+
+div.hack > p:first-child
+{
+	font-style: italic;
+	font-weight: bold;
+	width: 50%;
+	margin-left: 5%;
+}
+
+div.note
+{
+	border-width: thin;
+	border-style: solid;
+}
+
+div.caution
+{
+	border-width: thin;
+	border-style: solid;
+	background: #ff6666;
+}
+
+div.production
+{
+	background: #000000;
+	color: #ffffff;
+	text-align: center;
+}
+
+.code_command
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.epigraph
+{
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.literal
+{
+    white-space: pre-wrap;
+    line-height: 1.5em;
+}
+
+.programlisting
+{
+  background-color: #CCCCCC ;
+  border: 1px solid #006600 ;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.screen
+{
+  border: 1px solid #006600 ;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+li
+{
+    margin-top: 0.75em;
+}
+
+div.blockquote
+{
+    line-height: 1.5em;
+    margin-left: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div.blockquote p
+{
+    padding: 0;
+    margin: 0.5em;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+.sidebar
+{
+    padding: 1em;
+    border: 1px solid;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin: 0;
+}
+
+.tip
+{
+    padding: 0.5em;
+    border: 1px solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    align: center;
+}
+
+.tip .title
+{
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.tip .title code
+{
+    color: white;
+}
+
+hr
+{
+    width: 65%;
+}
