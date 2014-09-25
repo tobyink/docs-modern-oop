@@ -64,6 +64,10 @@ method:
 Note that overloading allows blessed objects to support the unnamed
 method call too.
 
+One particular case of this pattern is where the coderef acts as
+a factory - i.e. an object thats sole purpose is to instantiate other
+objects.
+
 =item Coderefs are mobile methods
 
 A coderef C<< $method >> is a method that is independent of classes
