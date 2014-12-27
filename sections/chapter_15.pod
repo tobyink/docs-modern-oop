@@ -1,0 +1,14 @@
+=encoding utf-8
+
+=head0 Design Patterns
+
+X<pattern>
+
+=begin epigraph
+
+I look for patterns that nobody else does. Like I noticed that my face
+looks like a tablecloth. Especially when I have food all over it.
+-- Jarod Kintz
+
+=end epigraph
+

@@ -2,7 +2,7 @@
 
 =head0 Namespaces
 
-X<namespaces>
+X<namespace>
 X<naming>
 
 =begin epigraph

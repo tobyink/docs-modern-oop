@@ -1,0 +1,20 @@
+=encoding utf-8
+
+=head0 Inheritance
+
+X<class>
+X<inheritance>
+X<base>
+X<derived>
+X<parent>
+X<child>
+
+=begin epigraph
+
+How delightful! Dunford had just come into an unexpected inheritance.
+She rather hoped it was something good. One of her friends had just
+unwillingly inherited thirty-seven cats.
+-- Julia Quinn
+ 
+=end epigraph
+

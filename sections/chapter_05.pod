@@ -1,0 +1,21 @@
+=encoding utf-8
+
+=head0 Encapsulation and Accessors
+
+X<encapsulation>
+X<privacy>
+X<public>
+X<protected>
+X<private>
+X<family>
+X<friend>
+
+=begin epigraph
+
+Perl doesn't have an infatuation with enforced privacy. It would
+prefer that you stayed out of its living room because you weren't
+invited, not because it has a shotgun.
+-- Larry Wall
+
+=end epigraph
+

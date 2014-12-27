@@ -1,0 +1,17 @@
+=encoding utf-8
+
+=head0 Objects
+
+X<object>
+X<instance>
+X<constructor>
+
+=begin epigraph
+
+It is dangerous to make predictions, especially in a discipline that
+changes so rapidly, but one thing I can say with confidence is that
+I have seen the future, and it is object-oriented.
+-- Grady Booch
+
+=end epigraph
+

@@ -1,0 +1,18 @@
+=encoding utf-8
+
+=head0 Lazy Attributes
+
+X<lazy>
+X<builder>
+X<attribute>
+X<accessor>
+
+=begin epigraph
+
+I don't think necessity is the mother of invention - invention, in my
+opinion, arises directly from idleness, possibly also from laziness.
+To save oneself trouble.
+-- Agatha Christie
+
+=end epigraph
+

@@ -1,0 +1,14 @@
+=encoding utf-8
+
+=head0 Interfaces
+
+X<role>
+X<interface>
+
+=begin epigraph
+
+As far as the customer is concerned, the interface is the product.
+-- Jef Raskin
+
+=end epigraph
+

@@ -1,0 +1,19 @@
+=encoding utf-8
+
+=head0 Delegation and Callbacks
+
+X<delegation>
+X<callback>
+X<closure>
+X<coderef>
+
+=begin epigraph
+
+I don't have a problem with delegation. I love to delegate. I am either
+lazy enough, or busy enough, or trusting enough, or congenial enough,
+that the notion leaving tasks in someone else's lap doesn't just sound
+wise to me, it sounds attractive.
+-- John Ortberg
+
+=end epigraph
+

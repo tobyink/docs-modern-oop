@@ -1,0 +1,18 @@
+=encoding utf-8
+
+=head0 Traits
+
+X<role>
+X<trait>
+
+=begin epigraph
+
+Identical twins are ideal lab specimens for studying the difference
+between learned and inherited traits since they come from the womb
+preloaded with matching genetic operating systems. Any meaningful
+differences in their behaviors or personalities are thus likely to
+have been acquired, not innate.
+-- Jeffrey Kluger
+
+=end epigraph
+

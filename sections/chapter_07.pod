@@ -1,0 +1,18 @@
+=encoding utf-8
+
+=head0 Type Constraints and Coercions
+
+X<type>
+X<constraint>
+X<coercion>
+X<isa>
+X<coerce>
+
+=begin epigraph
+
+I have never been forced to accept compromises but I have willingly
+accepted constraints.
+-- Charles Eames
+
+=end epigraph
+

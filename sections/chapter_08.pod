@@ -1,0 +1,20 @@
+=encoding utf-8
+
+=head0 Roles
+
+X<role>
+X<trait>
+X<mixin>
+X<interface>
+X<behaviour>
+
+=begin epigraph
+
+The roles that we construct are constructed because we feel that they
+will help us to survive and also, of course, because they fulfill
+something in our personalities; and one does not, therefore, cease
+playing a role simply because one has begun to understand it. 
+-- James Baldwin
+
+=end epigraph
+
