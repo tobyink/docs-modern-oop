@@ -1,19 +1,35 @@
 =encoding utf-8
 
-=head0 Classes and Methods
+=head0 Objects
 
-X<class>
-X<method>
+X<object>
+X<instance>
+X<constructor>
 
 =begin epigraph
 
-Method is essential, and enables a larger amount of work to be got
-through with satisfaction. "Method," said Cecil (afterward Lord
-Burleigh), "is like packing things in a box; a good packer will get
-in half as much again as a bad one." Cecil's despatch of business
-was extraordinary; his maxim being, "The shortest way to do many
-things is to do only one thing at once." 
--- Samuel Smiles
+It is dangerous to make predictions, especially in a discipline that
+changes so rapidly, but one thing I can say with confidence is that
+I have seen the future, and it is object-oriented.
+-- Grady Booch
 
 =end epigraph
 
+The most important concept in object-oriented programming is naturally
+the object.
+
+Objects are synonymous with objects in the real world. Think of any
+object and think of how it looks and how it is measured and interacted
+with. When creating OOP languages, the reasoning was that if it mimics
+the thought process of humans, it would simplify the coding experience.
+
+For example, let's consider a chair, and its dimensions, weight,
+colour and what is it made out of. In object-oriented Perl, these values
+are called M<Attributes>. These are values that define the object's
+identity and state.
+
+L<objects_are_references>
+
+L<object_methods>
+
+L<constructors>

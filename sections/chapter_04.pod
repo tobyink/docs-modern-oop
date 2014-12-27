@@ -1,17 +1,19 @@
 =encoding utf-8
 
-=head0 Objects
+=head0 Classes and Methods
 
-X<object>
-X<instance>
-X<constructor>
+X<class>
+X<method>
 
 =begin epigraph
 
-It is dangerous to make predictions, especially in a discipline that
-changes so rapidly, but one thing I can say with confidence is that
-I have seen the future, and it is object-oriented.
--- Grady Booch
+Method is essential, and enables a larger amount of work to be got
+through with satisfaction. "Method," said Cecil (afterward Lord
+Burleigh), "is like packing things in a box; a good packer will get
+in half as much again as a bad one." Cecil's despatch of business
+was extraordinary; his maxim being, "The shortest way to do many
+things is to do only one thing at once." 
+-- Samuel Smiles
 
 =end epigraph
 
