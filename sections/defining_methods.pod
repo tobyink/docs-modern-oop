@@ -1,0 +1,6 @@
+=head1 Defining Object Methods
+
+X<method; defining>
+X<object method; defining>
+
+Z<defining_methods>

@@ -1,9 +1,6 @@
 =encoding utf-8
 
-=head0 Classes and Methods
-
-X<class>
-X<method>
+=head0 Classes and Constructors
 
 =begin epigraph
 
@@ -16,4 +13,15 @@ things is to do only one thing at once."
 -- Samuel Smiles
 
 =end epigraph
+
+In the chapter on objects, I glossed over how objects are created.
+Just using object only requires you to know that they're references,
+and that methods can be called on them. Building objects requires
+you to know about classes.
+
+L<classes>
+
+L<constructors>
+
+L<defining_methods>
 

@@ -1,0 +1,29 @@
+=head1 Objects are References
+
+X<objects>
+X<instances>
+
+Z<objects_are_references>
+
+An object is something that can be stored in a scalar variable, or in
+a single slot of a hash or array variable. In that sense, an object is
+similar to a value like a string or integer.
+
+So C<< $person >> could be an object, or C<< $people[4] >> could be an
+object, or C<< $people{"Bob"} >> could be an object.
+
+However, in Perl, as in most programming languages, objects are
+manipulated I<< by reference >>, meaning that given the following,
+you should expect the value "20" to be printed:
+
+	my $A   = get_some_object();
+	my $B   = $A;
+	
+	$A->set_value(20);
+	
+	say $B->get_value();
+
+In the code above, the variables C<< $A >> and C<< $B >> refer to the
+same object. Changes to the object applied through one variable are
+visible through the other. C<< $A >> and C<< $B >> should not be
+thought of as two objects, but as two names for the same object.

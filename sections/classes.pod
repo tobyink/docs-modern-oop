@@ -1,0 +1,38 @@
+=head1 Classes
+
+X<class>
+X<instance>
+
+Z<classes>
+
+In Perl, a M<class> is just any package which has been designed to be
+used as a class. A simple example of such a class is:
+
+	package Rock {
+		use Moose;
+	}
+
+We can later add to the C<Rock> package any behaviour associated with
+Rock objects.
+
+=head2 The C<new> Method
+
+To create objects ("M<instances>") of the Rock class, we call a constructor.
+Moose automatically provides a constructor called C<new> for all classes
+defined using Moose.
+
+	my $tom = Rock->new();
+	
+	my $class = "Rock";
+	my $tom = $class->new();
+
+See the section on constructors for how to influence the behaviour of the
+standard Moose constructor, and how to define alternative constructors.
+
+=head2 The C<isa> Method
+
+You can check which class an object is an instance of using the C<isa> method:
+
+	say "Tom is a Rock" if $tom->isa("Rock");
+
+All Perl objects provide an C<isa> method.

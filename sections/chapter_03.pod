@@ -1,10 +1,6 @@
 =encoding utf-8
 
-=head0 Objects
-
-X<object>
-X<instance>
-X<constructor>
+=head0 Objects and Methods
 
 =begin epigraph
 
@@ -16,7 +12,7 @@ I have seen the future, and it is object-oriented.
 =end epigraph
 
 The most important concept in object-oriented programming is naturally
-the object.
+the M<object>.
 
 Objects are synonymous with objects in the real world. Think of any
 object and think of how it looks and how it is measured and interacted
@@ -24,12 +20,44 @@ with. When creating OOP languages, the reasoning was that if it mimics
 the thought process of humans, it would simplify the coding experience.
 
 For example, let's consider a chair, and its dimensions, weight,
-colour and what is it made out of. In object-oriented Perl, these values
-are called M<Attributes>. These are values that define the object's
-identity and state.
+colour and what is it made out of. These are values that define the
+object's identity and state. Actions can be performed to the chair.
+It can be moved; it can be sat on, or stood on; it can be destroyed.
+
+The concept of object-oriented programming was first described by
+Alan Kay, the inventor of the Smalltalk programming language. A rough
+definition of object-oriented programming, pared down to the parts
+which apply to Perl and Moose are:
+
+=over
+
+=item 1.
+
+(Almost) everything is an object.
+
+=item 2.
+
+Objects communicate by sending and receiving messages.
+
+=item 3.
+
+Objects have their own memory.
+
+=item 4.
+
+Every object is an instance of a class.
+
+=item 5.
+
+The class holds the shared behavior for its instances.
+
+=back
+
+In this chapter we'll examine the first three points in detail. The
+remaining points will be discussed in the next chapter, on classes.
 
 L<objects_are_references>
 
-L<object_methods>
+L<calling_object_methods>
 
-L<constructors>
+L<object_attributes>

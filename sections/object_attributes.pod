@@ -1,0 +1,32 @@
+=head1 Object Attributes
+
+X<attributes>
+
+Z<object_attributes>
+
+Objects have their own memory.
+
+In practical terms, this means that data can be stored within objects.
+When you create an object C<< $chair >>, you would typically assign it
+a height, a width, a depth, a weight, and a colour. These values can
+be queried later by calling methods:
+
+	my $volume  = $chair->height * $chair->width * $chair->depth;
+	my $density = $chair->weight / $volume;
+
+Some method calls may alter (M<mutate>) the object's values. Each object
+has its own memory, so altering the values of one object do not alter the
+values of another object.
+
+	my $first  = get_chair( colour => "red" );
+	my $second = get_chair( colour => "red" );
+	my $again  = $first;   # same object!
+	
+	$first->paint("green");
+	say $first->colour;    # green
+	say $second->colour;   # red
+	say $again->colour;    # green
+
+In Moose, the "slots" in which these values are stored are called
+M<attributes>, and the methods which allow you to retrieve and manipulate
+the values are called M<accessors>.

@@ -1,0 +1,39 @@
+=head1 Calling Object Methods
+
+X<methods; calling>
+X<object methods; calling>
+
+Z<calling_object_methods>
+
+Abstractly, objects communicate by sending and receiving messages.
+
+Concretely, to send a message to an object, you call a M<method> on it.
+Two methods were shown in the previous example: C<set_value> and
+C<get_value>.
+
+Given an object C<< $foo >> and a method named C<< bar >> there are two
+basic ways to call the method on the object. You can hard-code the name
+of the method into the call:
+
+	$foo->bar( @arguments )
+
+Or you can name the method via a variable:
+
+	my $name = "bar";
+	$foo->$name( @arguments )
+
+If there are no arguments to pass to the method, the parentheses may
+be omitted:
+
+	$foo->bar
+	$foo->$name    ## in this case, adding parentheses may be clearer
+
+An important concept in object-oriented programming, is that we can
+call the method C<bar> without knowing exactly what sort of object
+C<< $foo >> references. The object C<< $foo >> provides an implementation
+of C<bar>, which the method call dispatches too.
+
+In the following example, each of the objects might provide an entirely
+different implementation of C<< get_bar >>:
+
+	my @bars = map { $_->get_bar } $hotel, $ironworks, $backgammon_board;
